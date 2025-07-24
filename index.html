@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fab fa-github"></i> GitHub Explorer</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search repositories...">
+                <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </header>
+
+        <div class="filters">
+            <select id="language-filter">
+                <option value="">All Languages</option>
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="csharp">C#</option>
+                <option value="php">PHP</option>
+                <option value="ruby">Ruby</option>
+            </select>
+            <select id="sort-filter">
+                <option value="stars">Most Stars</option>
+                <option value="forks">Most Forks</option>
+                <option value="updated">Recently Updated</option>
+            </select>
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+        </div>
+
+        <div id="results-container" class="results-container"></div>
+
+        <div class="pagination">
+            <button id="prev-btn" disabled><i class="fas fa-arrow-left"></i> Previous</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-btn" disabled>Next <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
